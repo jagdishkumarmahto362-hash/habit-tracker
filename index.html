@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>HTML, CSS, JavaScript</title>
+    <link rel="stylesheet" href="./style.css">
+
+  </head>
+    
+  <body>
+  <div class="app">
+
+  <header>
+
+    <div>
+      <p class="welcome">YOUR DAILY ROUTINE</p>
+
+      <h1>Habit Tracker</h1>
+
+      <p id="today"></p>
+    </div>
+
+    <div class="logo">
+      🔥
+    </div>
+
+  </header>
+
+
+  <!-- DAILY PROGRESS -->
+
+  <section class="progress-card">
+
+    <div>
+
+      <p>Today's Progress</p>
+
+      <h2 id="progress">0%</h2>
+
+      <small>
+        <span id="completedCount">0</span>
+        of
+        <span id="totalCount">0</span>
+        completed
+      </small>
+
+    </div>
+
+    <div class="progress-circle">
+
+      <span id="circleText">
+        0%
+      </span>
+
+    </div>
+
+  </section>
+
+
+  <!-- MOTIVATION -->
+
+  <section class="motivation-card">
+
+    <div class="motivation-icon">
+      💡
+    </div>
+
+    <div>
+
+      <p>Today's Motivation</p>
+
+      <h3 id="motivation">
+        Start small. Stay consistent.
+      </h3>
+
+    </div>
+
+  </section>
+
+
+  <!-- 7 DAY CALENDAR -->
+
+  <section class="card">
+
+    <div class="section-title">
+
+      <h2>📅 Last 7 Days</h2>
+
+      <span id="weekPercent">
+        0%
+      </span>
+
+    </div>
+
+    <div
+      id="weekCalendar"
+      class="week-calendar"
+    ></div>
+
+  </section>
+
+
+  <!-- WEEKLY PROGRESS -->
+
+  <section class="card">
+
+    <h2>📊 Weekly Progress</h2>
+
+    <div class="weekly-progress">
+
+      <div class="weekly-number">
+
+        <strong id="weeklyPercent">
+          0%
+        </strong>
+
+        <span>
+          This Week
+        </span>
+
+      </div>
+
+      <div class="weekly-bar">
+
+        <div id="weeklyBar"></div>
+
+      </div>
+
+    </div>
+
+    <p
+      id="weeklyText"
+      class="weekly-text"
+    >
+      Complete your habits every day.
+    </p>
+
+  </section>
+
+
+  <!-- ADD HABIT -->
+
+  <section class="card">
+
+    <h2>➕ Add Daily Habit</h2>
+
+    <div class="add-box">
+
+      <input
+        id="habitInput"
+        type="text"
+        placeholder="e.g. Study 2 hours"
+      >
+
+      <select id="categoryInput">
+
+        <option value="Study">
+          📚 Study
+        </option>
+
+        <option value="Health">
+          💪 Health
+        </option>
+
+        <option value="Fitness">
+          🏃 Fitness
+        </option>
+
+        <option value="Reading">
+          📖 Reading
+        </option>
+
+        <option value="Personal">
+          🌱 Personal
+        </option>
+
+        <option value="Other">
+          ⭐ Other
+        </option>
+
+      </select>
+
+      <button onclick="addHabit()">
+        + Add Habit
+      </button>
+
+    </div>
+
+  </section>
+
+
+  <!-- TODAY'S HABITS -->
+
+  <section class="card">
+
+    <div class="section-title">
+
+      <h2>☑️ Today's Habits</h2>
+
+      <span id="habitCount">
+        0
+      </span>
+
+    </div>
+
+    <div id="habitList"></div>
+
+  </section>
+
+
+  <!-- CATEGORY SUMMARY -->
+
+  <section class="card">
+
+    <h2>🏷️ Habit Categories</h2>
+
+    <div
+      id="categorySummary"
+      class="category-grid"
+    ></div>
+
+  </section>
+
+
+  <!-- STREAK -->
+
+  <section class="streak-card">
+
+    <div class="fire">
+      🔥
+    </div>
+
+    <div>
+
+      <p>Best Current Streak</p>
+
+      <h2>
+        <span id="streak">0</span>
+        Days
+      </h2>
+
+      <small>
+        Keep going! 💪
+      </small>
+
+    </div>
+
+  </section>
+
+
+  <!-- SETTINGS -->
+
+  <section class="card">
+
+    <h2>⚙️ Settings</h2>
+
+    <div class="setting">
+
+      <div>
+
+        <b>🌙 Dark Mode</b>
+
+        <small>
+          Change app appearance
+        </small>
+
+      </div>
+
+      <button
+        id="darkButton"
+        onclick="toggleDarkMode()"
+      >
+        OFF
+      </button>
+
+    </div>
+
+  </section>
+
+
+  <footer>
+
+    🔥 Build your habits. Build yourself.
+
+  </footer>
+
+</div>
+    <script  src="./script.js"></script>
+
+  </body>
+  
+</html>

@@ -1,0 +1,916 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+body {
+  font-family: Arial, sans-serif;
+
+  background: #f3f5fa;
+
+  color: #172033;
+
+  transition: 0.3s;
+}
+
+
+.app {
+  max-width: 480px;
+
+  min-height: 100vh;
+
+  margin: auto;
+
+  padding: 24px 16px 40px;
+}
+
+
+/* HEADER */
+
+header {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-bottom: 22px;
+}
+
+
+.welcome {
+
+  font-size: 10px;
+
+  letter-spacing: 2px;
+
+  color: #7b8497;
+
+  margin-bottom: 5px;
+}
+
+
+h1 {
+
+  font-size: 30px;
+
+  margin-bottom: 5px;
+}
+
+
+#today {
+
+  color: #7b8497;
+
+  font-size: 14px;
+}
+
+
+.logo {
+
+  width: 55px;
+
+  height: 55px;
+
+  border-radius: 17px;
+
+  background: #172033;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-size: 27px;
+}
+
+
+/* COMMON CARD */
+
+.card {
+
+  background: white;
+
+  border-radius: 22px;
+
+  padding: 20px;
+
+  margin-bottom: 18px;
+
+  box-shadow: 0 6px 20px #0000000c;
+}
+
+
+.card h2 {
+
+  font-size: 19px;
+
+  margin-bottom: 16px;
+}
+
+
+/* DAILY PROGRESS */
+
+.progress-card {
+
+  background: #172033;
+
+  color: white;
+
+  border-radius: 24px;
+
+  padding: 23px;
+
+  margin-bottom: 18px;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+}
+
+
+.progress-card p {
+
+  color: #b9c1d0;
+
+  margin-bottom: 7px;
+}
+
+
+.progress-card h2 {
+
+  font-size: 40px;
+
+  margin-bottom: 5px;
+}
+
+
+.progress-card small {
+
+  color: #c4cad5;
+}
+
+
+.progress-circle {
+
+  width: 90px;
+
+  height: 90px;
+
+  border: 7px solid #ffffff35;
+
+  border-top-color: white;
+
+  border-right-color: white;
+
+  border-radius: 50%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+}
+
+
+.progress-circle span {
+
+  font-size: 15px;
+
+  font-weight: bold;
+}
+
+
+/* MOTIVATION */
+
+.motivation-card {
+
+  background: white;
+
+  border-radius: 20px;
+
+  padding: 18px;
+
+  margin-bottom: 18px;
+
+  display: flex;
+
+  gap: 13px;
+
+  align-items: center;
+
+  box-shadow: 0 6px 20px #0000000c;
+}
+
+
+.motivation-icon {
+
+  width: 45px;
+
+  height: 45px;
+
+  background: #f1f3f7;
+
+  border-radius: 13px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-size: 22px;
+}
+
+
+.motivation-card p {
+
+  color: #8a92a1;
+
+  font-size: 11px;
+
+  margin-bottom: 4px;
+}
+
+
+.motivation-card h3 {
+
+  font-size: 14px;
+
+  line-height: 1.4;
+}
+
+
+/* SECTION TITLE */
+
+.section-title {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-bottom: 16px;
+}
+
+
+.section-title h2 {
+
+  margin-bottom: 0;
+}
+
+
+.section-title span {
+
+  background: #eef0f5;
+
+  color: #172033;
+
+  padding: 6px 10px;
+
+  border-radius: 20px;
+
+  font-size: 12px;
+
+  font-weight: bold;
+}
+
+
+/* 7 DAY CALENDAR */
+
+.week-calendar {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(7, 1fr);
+
+  gap: 6px;
+}
+
+
+.day-box {
+
+  text-align: center;
+
+  padding: 9px 3px;
+
+  border-radius: 12px;
+
+  background: #f4f5f8;
+}
+
+
+.day-name {
+
+  display: block;
+
+  font-size: 10px;
+
+  color: #7b8497;
+
+  margin-bottom: 7px;
+}
+
+
+.day-number {
+
+  display: flex;
+
+  width: 30px;
+
+  height: 30px;
+
+  margin: auto;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 50%;
+
+  font-size: 12px;
+
+  font-weight: bold;
+}
+
+
+.day-box.active {
+
+  background: #172033;
+
+  color: white;
+}
+
+
+.day-box.active .day-name {
+
+  color: #c5cad5;
+}
+
+
+.day-box.today {
+
+  border: 2px solid #172033;
+}
+
+
+.day-box.completed .day-number {
+
+  background: #172033;
+
+  color: white;
+}
+
+
+/* WEEKLY PROGRESS */
+
+.weekly-number {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-bottom: 12px;
+}
+
+
+.weekly-number strong {
+
+  font-size: 30px;
+}
+
+
+.weekly-number span {
+
+  color: #7b8497;
+
+  font-size: 13px;
+}
+
+
+.weekly-bar {
+
+  width: 100%;
+
+  height: 12px;
+
+  background: #eef0f4;
+
+  border-radius: 20px;
+
+  overflow: hidden;
+}
+
+
+.weekly-bar div {
+
+  width: 0%;
+
+  height: 100%;
+
+  background: #172033;
+
+  border-radius: 20px;
+
+  transition: width 0.3s;
+}
+
+
+.weekly-text {
+
+  margin-top: 12px;
+
+  color: #7b8497;
+
+  font-size: 13px;
+}
+
+
+/* ADD HABIT */
+
+.add-box {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 9px;
+}
+
+
+#habitInput,
+#categoryInput {
+
+  width: 100%;
+
+  padding: 14px;
+
+  border: 1px solid #dfe3eb;
+
+  border-radius: 12px;
+
+  font-size: 14px;
+
+  outline: none;
+
+  background: white;
+}
+
+
+.add-box button {
+
+  border: none;
+
+  border-radius: 12px;
+
+  padding: 13px;
+
+  background: #172033;
+
+  color: white;
+
+  font-weight: bold;
+
+  font-size: 14px;
+}
+
+
+/* HABIT */
+
+.habit {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 15px 0;
+
+  border-bottom: 1px solid #eeeeee;
+}
+
+
+.habit:last-child {
+
+  border-bottom: none;
+}
+
+
+.habit-check {
+
+  width: 22px;
+
+  height: 22px;
+
+  accent-color: #172033;
+}
+
+
+.habit-info {
+
+  flex: 1;
+}
+
+
+.habit-name {
+
+  font-size: 15px;
+
+  font-weight: bold;
+}
+
+
+.habit-category {
+
+  display: inline-block;
+
+  margin-top: 5px;
+
+  padding: 3px 7px;
+
+  border-radius: 8px;
+
+  background: #f0f2f6;
+
+  color: #687184;
+
+  font-size: 10px;
+}
+
+
+.habit-streak {
+
+  display: block;
+
+  margin-top: 5px;
+
+  font-size: 11px;
+
+  color: #8a92a1;
+}
+
+
+.habit.done .habit-name {
+
+  text-decoration: line-through;
+
+  color: #999;
+}
+
+
+.delete-button {
+
+  border: none;
+
+  background: none;
+
+  font-size: 18px;
+}
+
+
+/* EMPTY */
+
+.empty {
+
+  text-align: center;
+
+  padding: 25px 10px;
+
+  color: #8a92a1;
+
+  font-size: 14px;
+}
+
+
+/* CATEGORY */
+
+.category-grid {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, 1fr);
+
+  gap: 10px;
+}
+
+
+.category-box {
+
+  background: #f5f6fa;
+
+  border-radius: 14px;
+
+  padding: 14px;
+}
+
+
+.category-box strong {
+
+  display: block;
+
+  font-size: 14px;
+
+  margin-bottom: 5px;
+}
+
+
+.category-box span {
+
+  color: #7b8497;
+
+  font-size: 12px;
+}
+
+
+/* STREAK */
+
+.streak-card {
+
+  background: #172033;
+
+  color: white;
+
+  border-radius: 22px;
+
+  padding: 20px;
+
+  margin-bottom: 18px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+}
+
+
+.fire {
+
+  width: 55px;
+
+  height: 55px;
+
+  background: #ffffff15;
+
+  border-radius: 16px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-size: 28px;
+}
+
+
+.streak-card p {
+
+  color: #b9c1d0;
+
+  font-size: 13px;
+
+  margin-bottom: 4px;
+}
+
+
+.streak-card h2 {
+
+  font-size: 25px;
+}
+
+
+/* SETTINGS */
+
+.setting {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+}
+
+
+.setting b {
+
+  display: block;
+
+  margin-bottom: 4px;
+}
+
+
+.setting small {
+
+  color: #8a92a1;
+
+  font-size: 12px;
+}
+
+
+#darkButton {
+
+  min-width: 58px;
+
+  border: none;
+
+  border-radius: 20px;
+
+  padding: 9px 12px;
+
+  background: #e5e8ee;
+
+  color: #172033;
+
+  font-weight: bold;
+}
+
+
+/* FOOTER */
+
+footer {
+
+  text-align: center;
+
+  padding: 10px;
+
+  color: #8a92a1;
+
+  font-size: 12px;
+}
+
+
+/* DARK MODE */
+
+body.dark {
+
+  background: #10141c;
+
+  color: #f1f3f7;
+}
+
+
+body.dark .card,
+body.dark .motivation-card {
+
+  background: #1a202c;
+
+  color: white;
+}
+
+
+body.dark .progress-card,
+body.dark .streak-card {
+
+  background: #080c12;
+}
+
+
+body.dark .logo {
+
+  background: white;
+}
+
+
+body.dark #habitInput,
+body.dark #categoryInput {
+
+  background: #242b38;
+
+  color: white;
+
+  border-color: #414b5d;
+}
+
+
+body.dark .motivation-icon {
+
+  background: #303846;
+}
+
+
+body.dark .habit {
+
+  border-bottom-color: #303846;
+}
+
+
+body.dark .habit-category {
+
+  background: #303846;
+
+  color: #d0d5df;
+}
+
+
+body.dark .habit-streak {
+
+  color: #aab3c2;
+}
+
+
+body.dark .day-box {
+
+  background: #242b38;
+}
+
+
+body.dark .day-box.today {
+
+  border-color: white;
+}
+
+
+body.dark .day-box.active {
+
+  background: #080c12;
+}
+
+
+body.dark .day-box.completed .day-number {
+
+  background: white;
+
+  color: #172033;
+}
+
+
+body.dark .weekly-bar {
+
+  background: #303846;
+}
+
+
+body.dark .weekly-bar div {
+
+  background: white;
+}
+
+
+body.dark .category-box {
+
+  background: #242b38;
+}
+
+
+body.dark .section-title span {
+
+  background: #303846;
+
+  color: white;
+}
+
+
+body.dark #darkButton {
+
+  background: white;
+
+  color: #172033;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 380px) {
+
+  .app {
+
+    padding-left: 12px;
+
+    padding-right: 12px;
+
+  }
+
+  h1 {
+
+    font-size: 26px;
+
+  }
+
+  .progress-circle {
+
+    width: 75px;
+
+    height: 75px;
+
+  }
+
+  .week-calendar {
+
+    gap: 4px;
+
+  }
+
+}
