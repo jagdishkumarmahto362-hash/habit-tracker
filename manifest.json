@@ -1,13 +1,23 @@
 {
-  "background_color": "#ffffff",
-  "dir": "ltr",
-  "display": "standalone",
-  "name": "jagdishkumarmahto362-hash.github",
-  "orientation": "any",
-  "scope": "/",
+  "name": "Habit Tracker",
   "short_name": "Habit Tracker",
-  "start_url": "/",
+  "description": "A simple daily habit tracker to build better habits.",
+  "start_url": "/habit-tracker/",
+  "scope": "/habit-tracker/",
+  "display": "standalone",
+  "background_color": "#FFFFFF",
   "theme_color": "#111827",
-  "id": "habit-tracker",
-  "description": "A simple daily habit tracker to build better habits."
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "/habit-tracker/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/habit-tracker/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
 }
